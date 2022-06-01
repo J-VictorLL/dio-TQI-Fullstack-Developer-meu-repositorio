@@ -1,0 +1,47 @@
+html{
+    position: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button{
+    margin: 15px;
+    font-size: 30px;
+    border-radius: 10px;
+    color: rgb(24, 125, 150);
+    border: 3px solid rgb(24, 125, 150);
+    background-color: rgb(190, 224, 233);
+    padding: 5px;
+}
+input{
+    font-size: 30px;
+    border-radius: 10px;
+    padding: 5px;
+}
+input::placeholder{
+    opacity: 0.6;
+}
+
+ul{
+    font-size: 30px;
+    position: flex;
+    flex-direction: column;
+    margin-left: 35%;
+    text-align:justify;
+    list-style: none;
+}
+li{
+    position: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.chek{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #808080;
+    margin: 10px;
+}
+.chek:checked + label{
+    text-decoration: line-through;
+    color: #808080;
+}
