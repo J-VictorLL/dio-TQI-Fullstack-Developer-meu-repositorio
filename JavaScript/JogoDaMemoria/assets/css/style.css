@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #c2d3ac;
+}
+
+header{
+   margin: auto;
+   text-align: center;
+   font-family: 'roboto',sans-serif;
+   color: #343c39;
+}
+h2{
+    margin-top: 4%;
+}
+
+.memory-game {
+    height: 640px;/*tamanho para cobrir boa parte da tela*/
+    width: 640px;
+    margin: auto;
+    margin-top: -5%;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px; /* Causar perspectiva de elevação das cartas do jogo -> para efeito 3D*/
+}
+
+.card {
+    height: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.3);
+    border-radius: 5px;/* evita efeito de cantos na carta*/
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d; /*Novidade: causa o efeito de elemento 3D durante o processo de transform*/
+    transition: transform .9s; /*causa movimento de flip*/
+}
+
+.card:active{
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #343c39;
+  backface-visibility: hidden; /*Novidade: todo elemento tem uma frente e um verso, espelhado. Essa propriedade remove o verso(backface) */
+}
+.card-front{
+    max-height: 100%;
+    padding: auto;
+}
+
+.card-front {
+    transform: rotateY(180deg); /* Gira a imagem, para que ela apareca corretamente depois do flip */
+}
+
+.card.flip {/* animação de flip */
+    transform: rotateY(180deg);
+}
+
+
+@media (max-width: 540px) {
+
+    header{
+        width:100%;
+        margin: auto;
+        margin-bottom: 16%;
+    }
+
+    .memory-game {
+        width:calc(99% - 10px);
+        height:calc(46% - 10px);
+    }
+
+    .card:active{
+        transform: scale(0.97);
+        transition: transform .4s;
+    }
+}
