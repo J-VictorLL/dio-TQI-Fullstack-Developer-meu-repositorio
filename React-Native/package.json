@@ -6,15 +6,17 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "eslint": "eslint ./src/*.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.1.0",
+    "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "^3.0.1"
+    "react-is": "^16.13.1",
+    "react-scripts": "^3.0.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
