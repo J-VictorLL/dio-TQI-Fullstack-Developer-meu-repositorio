@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState, useEffect} from "react";
 import styled from "styled-components";
 import style from './IFoodCounter.css' 
 console.log(style)
@@ -6,6 +6,13 @@ console.log(style)
 function iFoodCounter(){
     const [value,setValue] = useState(1);
     const [buttonStyle,setButtonStyle] = useState("counter-button-minus-active")
+
+    useEffect(()=>{
+        if(value==0) alert("Não pode ser diminuido")
+    },[buttonStyle])//Efeito colateral -> se ouver qualquer alteração no que é posto no segundo campo, a função é execultada
+    useEffect(()=>{
+        document.getElementById('moeda').innerHTML = 12.00 * value;
+    },[value])
 
     function down(){
         if(value<=1) setButtonStyle("counter-button-minus-desactive")
@@ -22,6 +29,7 @@ function iFoodCounter(){
             <button className={buttonStyle} onClick={down}>-</button>
             <h1 id="counter-box">{value}</h1>
             <button className="counter-button-plus-active" onClick={up}>+</button>
+            <button id="moeda">12,00</button>
         </Content>
     )
 }
