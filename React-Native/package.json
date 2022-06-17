@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "sideEffects": ["*.css"],
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",

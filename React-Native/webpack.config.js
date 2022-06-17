@@ -26,10 +26,14 @@ module.exports ={
                   },
                 ],
               },
-              {
-                test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
-              },
+              {                                        
+                test: /\.(sa|sc|c)ss$/,              
+                use: [   
+                    "css-loader",                    
+                    "sass-loader",                   
+                ],                                   
+                sideEffects: true,                   
+              },   
         ]
     },
     plugins:[

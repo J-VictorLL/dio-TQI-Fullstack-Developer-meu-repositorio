@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Counter from '../Counter/Counter'
+import SmartCounter from "../SmartCounter/SmartCounter";
+import IFoodCounter from "../IFoodCounter/IFoodCounter";
 
 const App = () =>{
 
     return(
         <Content>
             <h1>TREINO COMPONENTES</h1>
-            <Cot>
-                <Counter />
-            </Cot>
+            <IFoodCounter/>
         </Content>
     );
 }
