@@ -1,5 +1,5 @@
 import React from "react";
-import useGithub from "../../hooks/github-hooks";
+import useGithub from "../../hooks/GithubHooks";
 import * as Style from "./styled";
 
 function Profile() {

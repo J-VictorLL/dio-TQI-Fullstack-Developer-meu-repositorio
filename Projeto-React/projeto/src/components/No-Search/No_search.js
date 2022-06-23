@@ -1,7 +1,7 @@
 import React from "react";
 import * as Style from "./styled";
 
-function No_Search() {
+function NoSearch() {
   return (
     <Style.Wrapper>
       <h1>Nenhum usuário foi pesquisado!</h1>
@@ -9,4 +9,4 @@ function No_Search() {
   );
 };
 
-export default No_Search;
+export default NoSearch;
