@@ -23,7 +23,7 @@ public abstract class Conta implements OperaçõesConta{
 
 	@Override
 	public boolean sacar(double valor) {
-		if(this.saldo<valor) {
+		if(this.saldo<=valor) {
 			System.out.println("Erro! Saldo insufiviente!");
 			return false;
 		}
