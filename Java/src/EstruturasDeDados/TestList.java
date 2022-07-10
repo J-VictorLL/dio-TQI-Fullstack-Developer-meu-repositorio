@@ -1,0 +1,29 @@
+package EstruturasDeDados;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List<Carro> listCarros = new ArrayList<>();
+		
+		listCarros.add(new Carro("Ford"));
+		listCarros.add(new Carro("Chevrolet"));
+		listCarros.add(new Carro("Fiat"));
+		listCarros.add(new Carro("Volkswagen"));
+		
+		System.out.println(listCarros);
+		//erro se der false
+		System.out.println(listCarros.contains(new Carro("Ford")));
+		System.out.println(listCarros);
+		//so da false se não retornar
+		System.out.println(listCarros.get(2));
+		System.out.println(listCarros.indexOf(new Carro("Fiat")));
+		
+		System.out.println(listCarros.remove(2));//pega o primeiro elemento sem remove-lo
+		System.out.println(listCarros);
+	}
+
+}
